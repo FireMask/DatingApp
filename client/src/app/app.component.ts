@@ -10,10 +10,12 @@ import { getuid } from 'process';
 export class AppComponent implements OnInit {
   title = 'The Dating App';
   users: any;
+  fecha: any;
 
   constructor(private http: HttpClient){}
   
   ngOnInit() {
+    this.fecha = Date.now();
     this.getUsers();
   }
 
